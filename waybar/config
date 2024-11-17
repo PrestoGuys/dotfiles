@@ -1,0 +1,35 @@
+{
+  	"layer": "bottom",
+  	"position": "bottom",
+  	"height": 24,
+  	"spacing": 5,
+
+	"cpu": { 
+  		"interval": 1, 
+  		"format": "CPU: {usage}% |" 
+	},
+
+	"memory": {
+  		"interval": 1,
+  		"format": "RAM: {used:0.1f}GiB/{total:0.1f}GiB ({percentage}%) |"
+	},
+
+	"clock": {
+		"interval": 1,
+  		"format": "{:%Y.%m.%d %H:%M:%S}"
+	},
+
+	"network": {
+		"interface": "enp0s25",
+		"interval": 1,
+		"format": "Name: {ifname} | Up: {bandwidthUpBytes} Down: {bandwidthDownBytes} Total: {bandwidthTotalBytes}"
+	},
+
+	"hyprland/window": {
+		"format": "{}"
+	},
+
+	"modules-left": ["network"],
+	"modules-center": ["hyprland/window"],
+  	"modules-right": ["cpu","memory","clock"]
+}
